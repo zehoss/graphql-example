@@ -1,0 +1,15 @@
+type Offer {
+    id: ID!
+    title: String!
+    description: String
+    price: Long!
+}
+
+extend type Query {
+    offers: [Offer]!
+    offer(id: ID!): Offer
+}
+
+#type Mutation {
+#    newOffer(title: String!, price: Long!, description: String): Offer!
+#}
